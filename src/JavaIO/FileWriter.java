@@ -5,17 +5,34 @@
  */
 package JavaIO;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author Blessing
  */
 public class FileWriter {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+   
+    public static void main(String[] args) throws IOException {
+        
+        //Reading the File
+        File file=new File("C://Users/Reverside/Desktop/git.txt");
+        Scanner scan=new Scanner(file);
+        
+        String fileContent="";
+        
+        while(scan.hasNextLine()){
+        
+            fileContent=fileContent.concat(scan.nextLine()+"\n");
+        }
+        
+//       FileWriter writer=new FileWriter();
+//       writer.
+        
     }
     
 }
